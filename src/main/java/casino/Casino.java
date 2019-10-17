@@ -16,5 +16,8 @@ public class Casino {
         hand.add(aaa.getCard());
         System.out.println(hand);
         System.out.println(aaa.getCard());
+
+        BlackJack blackjack = new BlackJack();
+        blackjack.play();
     }
 }
