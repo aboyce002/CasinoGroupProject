@@ -1,5 +1,7 @@
 package casino;
 
+import java.util.Scanner;
+
 public class FiveRolls {
 
     //first player places a wager
@@ -8,17 +10,53 @@ public class FiveRolls {
     //if less than three numbers are rolled they lose
     //winner is then paid by the other players
 
-    public void startGame() {
-        p1 = new Player();
-        p2 = new Player();
-        p3 = new Player();
+    public double wage = 0;
 
-        int targetNumber = (int) (Math.random() * 6);
-        System.out.println("This is the one right here");
+    public double wage() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("You have $" + totalMoney + " How much do you want to wage?");
+        double thisWage = input.nextDouble();
+        while (thisWage > totalMoney) {
+            System.out.println("You don't have that much money broke boi");
+            thisWage = input.nextDouble();
+        }
+        totalMoney -= wage;
+        return thisWage;
+    }
 
-        if (targetNumber % 2 == 0)
-            System.out.println("Player has to get an even two more times");
-        else
-            System.out.println("Roll again sucka!");
+    public void play() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("How much do you want to put down?");
+        String bet = input.nextLine();
+        double wage = wage();
+    }
+
+    public void fiveRolls() {
+
+        int counter = 0;
+        int evensCounter = 0;
+        double wage = 0;
+
+        while ((counter != 5) || (evensCounter != 3)) {
+
+            int targetNumber = (int) (Math.random() * 6);
+            System.out.println("This is the one right here");
+
+            if (targetNumber % 2 == 0) {
+                System.out.println("Player has to get an even" + (3 - counter) + " more times.");
+                evensCounter++;
+            } else {
+                System.out.println("Roll again sucka!");
+
+                if (evensCounter == 3) {
+                    System.out.println("You have won the game and your original bet has been doubled!" + wage * 2);
+                }
+
+                counter++;
+            }
+        }
     }
 }
+
+
+
