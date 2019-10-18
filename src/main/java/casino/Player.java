@@ -1,7 +1,6 @@
 package casino;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Player {
     private String userName;
@@ -20,7 +19,7 @@ public class Player {
     public void setAmountOfMoney(double amountOfMoney) {
         this.amountOfMoney = amountOfMoney;
     }
-
+  
     public Deck getHand() {
         return hand;
     }
