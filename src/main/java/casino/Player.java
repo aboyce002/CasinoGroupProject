@@ -19,10 +19,9 @@ public class Player {
     public void setAmountOfMoney(double amountOfMoney) {
         this.amountOfMoney = amountOfMoney;
     }
-
-    public Card[] getHand() {
-
-        return getHand();
+  
+    public Deck getHand() {
+        return hand;
     }
 
     public void setHand(Deck hand) {
