@@ -25,20 +25,5 @@ public class Casino {
         } else {
             System.out.println("That is not a game .-.");
         }
-
-        /*
-        Deck aaa = new Deck();
-        List<Card> hand = new ArrayList<Card>();
-
-        int card = (int)(Math.random() * aaa.cardsLeft());
-        System.out.println(aaa.getCard());
-        aaa.displayDeck();
-        aaa.shuffle();
-        aaa.displayDeck();
-
-        hand.add(aaa.getCard());
-        System.out.println(hand);
-        System.out.println(aaa.getCard());
-        */
     }
 }

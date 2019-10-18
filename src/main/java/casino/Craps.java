@@ -1,6 +1,6 @@
 package casino;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Craps implements GamblingGame{
     private int dice1;
@@ -13,8 +13,7 @@ public class Craps implements GamblingGame{
 
     public void play(){
         Scanner input = new Scanner(System.in);
-        System.out.println("Welcome to Craps. You have $" + totalMoney + ". Which bet would you like to take? ");
-        String bet = input.nextLine();
+        System.out.println("Welcome to Craps. You have $" + totalMoney + ".");
         wage = wage();
         pass();
     }

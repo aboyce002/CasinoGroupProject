@@ -6,9 +6,7 @@ public class Deck {
     private List<Card> deck = new ArrayList<Card>();
 
     //initialize with one pack/52 cards
-    public Deck(){
-        addCards();
-    }
+    public Deck(){ addCards(); }
 
     //option to initialize with multiple packs of cards for games like Blackjack
     public Deck(int x) {
@@ -28,18 +26,12 @@ public class Deck {
 
     //adds to the *top* of the deck
     public void addTop(Card c){
-        if(deck.size() < deckSize)
-            deck.add(c);
-        else
-            System.out.println("Deck full.");
+        deck.add(c);
     }
 
     //adds to the *bottom* of the deck
     public void addBottom(Card c){
-        if(deck.size() < deckSize)
-            deck.add(0, c);
-        else
-            System.out.println("Deck full.");
+        deck.add(0, c);
     }
 
     //get count
@@ -68,5 +60,13 @@ public class Deck {
 
     public void setDeckSize(int deckSize) {
         this.deckSize = deckSize;
+    }
+
+    public List<Card> getDeck() {
+        return deck;
+    }
+
+    public void setDeck(List<Card> deck) {
+        this.deck = deck;
     }
 }

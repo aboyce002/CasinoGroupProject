@@ -1,16 +1,20 @@
 package casino;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Player {
     private String userName;
     private double amountOfMoney;
-    private ArrayList<Deck> hand;
+    private ArrayList<Card> hand;
 
     public Player(String userName, double amountOfMoney){
         this.userName = userName;
         this.amountOfMoney = amountOfMoney;
+        this.hand = new ArrayList<Card>();
+    }
+
+    public String getUserName() {
+        return userName;
     }
 
     public double getAmountOfMoney() {
@@ -21,11 +25,11 @@ public class Player {
         this.amountOfMoney = amountOfMoney;
     }
 
-    public ArrayList<Deck> getHand() {
+    public ArrayList<Card> getHand() {
         return hand;
     }
 
-    public void setHand(ArrayList<Deck> hand) {
+    public void setHand(ArrayList<Card> hand) {
         this.hand = hand;
     }
 }
