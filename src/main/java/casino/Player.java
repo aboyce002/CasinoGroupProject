@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Player {
     private String userName;
     private double amountOfMoney;
-    private ArrayList<Deck> hand;
+    private Deck hand;
 
     public Player(String userName, double amountOfMoney){
         this.userName = userName;
@@ -21,11 +21,11 @@ public class Player {
         this.amountOfMoney = amountOfMoney;
     }
 
-    public ArrayList<Deck> getHand() {
+    public Deck getHand() {
         return hand;
     }
 
-    public void setHand(ArrayList<Deck> hand) {
+    public void setHand(Deck hand) {
         this.hand = hand;
     }
 }

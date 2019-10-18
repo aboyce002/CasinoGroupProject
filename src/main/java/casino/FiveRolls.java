@@ -11,16 +11,18 @@ public class FiveRolls {
     //winner is then paid by the other players
 
     public double wage = 0;
+    Player player = new Player("Jackie Chan", 900);
 
     public double wage() {
         Scanner input = new Scanner(System.in);
-        System.out.println("You have $" + totalMoney + " How much do you want to wage?");
+        double amountOfMoney = player.getAmountOfMoney();
+        System.out.println("You have $" + amountOfMoney + " How much do you want to wage?");
         double thisWage = input.nextDouble();
-        while (thisWage > totalMoney) {
+        while (thisWage > amountOfMoney) {
             System.out.println("You don't have that much money broke boi");
             thisWage = input.nextDouble();
         }
-        totalMoney -= wage;
+        amountOfMoney -= wage;
         return thisWage;
     }
 
