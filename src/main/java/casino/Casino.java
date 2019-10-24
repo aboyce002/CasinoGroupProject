@@ -12,14 +12,14 @@ public class Casino {
             GoFish goFish = new GoFish();
             goFish.play();
         } else if ("blackjack".equals(game.toLowerCase())) {
-            //BlackJack blackjack = new BlackJack();
-            //blackjack.play();
+            BlackJack blackjack = new BlackJack();
+            blackjack.play();
         } else if ("craps".equals(game.toLowerCase())) {
             Craps craps = new Craps();
             craps.play();
         } else if ("five rolls".equals(game.toLowerCase())) {
-            //FiveRolls fiveRolls = new FiveRolls();
-            //fiveRolls.play();
+            FiveRolls fiveRolls = new FiveRolls();
+            fiveRolls.play();
         } else {
             System.out.println("That is not a game .-.");
         }
