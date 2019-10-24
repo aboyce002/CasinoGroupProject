@@ -1,7 +1,5 @@
 package casino;
 
-import java.util.*;
-
 public class Casino {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
