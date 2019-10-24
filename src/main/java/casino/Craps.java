@@ -8,7 +8,7 @@ public class Craps implements GamblingGame{
     private int sum;
     private int point;
 
-    private int totalMoney = 100;
+    private double totalMoney = 10000;
     private double wage = 0;
 
     public void play(){
