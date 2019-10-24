@@ -5,11 +5,16 @@ import java.util.ArrayList;
 public class Player {
     private String userName;
     private double amountOfMoney;
-    private Deck hand;
+    private ArrayList<Card> hand;
 
     public Player(String userName, double amountOfMoney){
         this.userName = userName;
         this.amountOfMoney = amountOfMoney;
+        this.hand = new ArrayList<Card>();
+    }
+
+    public String getUserName() {
+        return userName;
     }
 
     public double getAmountOfMoney() {
@@ -19,12 +24,12 @@ public class Player {
     public void setAmountOfMoney(double amountOfMoney) {
         this.amountOfMoney = amountOfMoney;
     }
-  
-    public Deck getHand() {
+
+    public ArrayList<Card> getHand() {
         return hand;
     }
 
-    public void setHand(Deck hand) {
+    public void setHand(ArrayList<Card> hand) {
         this.hand = hand;
     }
 }
